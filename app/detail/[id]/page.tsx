@@ -77,7 +77,7 @@ export default function DetailPage() {
                   {day.items.map((item) => (
                     <div key={item.title} className={styles.timelineItem}>
                       <span className={styles.itemTime}>{item.time}</span>
-                      <div className={`${styles.itemDot} ${item.accent ? styles.accent : ''}`} />
+                      <div className={`${styles.itemDot} ${'accent' in item && item.accent ? styles.accent : ''}`} />
                       <div className={styles.itemContent}>
                         <h4>{item.title}</h4>
                         <p>{item.desc}</p>
